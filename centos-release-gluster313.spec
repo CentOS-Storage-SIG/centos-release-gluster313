@@ -1,5 +1,5 @@
 Summary: Gluster 3.13 (Short Term Stable) packages from the CentOS Storage SIG repository
-Name: centos-release-gluster311
+Name: centos-release-gluster313
 Version: 0.9
 Release: 1%{?dist}
 License: GPLv2
@@ -12,16 +12,16 @@ BuildArch: noarch
 Requires: centos-release-storage-common
 
 # Users can install centos-release-gluster to get the latest, but we do not
-# want to have 3.11 (Short Term Stable) to be selected when users do install
+# want to have 3.13 (Short Term Stable) to be selected when users do install
 # the virtual centos-release-gluster package.
 #
 # If users want to test other projects with a centos-release-gluster
-# dependency, they will need to install centos-release-gluster310 or similar in
-# addition to centos-release-gluster311
+# dependency, they will need to install centos-release-gluster313 or similar in
+# addition to centos-release-gluster313
 #
-#Provides: centos-release-gluster = 3.11
-#Conflicts: centos-release-gluster < 3.11
-#Obsoletes: centos-release-gluster < 3.11
+#Provides: centos-release-gluster = 3.13
+#Conflicts: centos-release-gluster < 3.13
+#Obsoletes: centos-release-gluster < 3.13
 
 %description
 yum configuration for Gluster 3.13 packages from the CentOS Storage SIG.
@@ -35,9 +35,9 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Glust
 
 %files
 %defattr(-,root,root)
-%config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Gluster-3.11.repo
+%config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Gluster-3.13.repo
 
 %changelog
 * Wed Nov 22 2017 Niels de Vos <ndevos@redhat.com> - 0.9-1
 - Initial version based on centos-release-gluster311
-- Only the centos-gluster311-test repo is enabled during Beta
+- Only the centos-gluster313-test repo is enabled during Beta
